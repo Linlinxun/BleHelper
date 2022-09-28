@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        tools:text="Get battery info regularly"
+        android:textSize="15sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/scOpenTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <NumberPicker
+        android:id="@+id/interval_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_set"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Send"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+</LinearLayout>

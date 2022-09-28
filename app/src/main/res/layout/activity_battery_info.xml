@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.battery.BatteryInfoActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/qmui_icon_topbar_back"
+        app:theme="@style/ToolbarTheme"
+        app:titleTextColor="@color/white" />
+
+    <EditText
+        android:id="@+id/display_edit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_border"
+        android:cursorVisible="false"
+        android:gravity="top"
+        android:importantForAutofill="no"
+        android:maxLines="50"
+        android:minLines="40"
+        android:scrollbars="none"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialToolbar" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent"
+      android:id="@+id/llShowProgressView"
+      android:gravity="center"
+      android:visibility="invisible"
+      tools:visibility="visible"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:orientation="vertical">
+      <ProgressBar
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="connecting..."/>
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
